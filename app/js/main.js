@@ -83,11 +83,14 @@ $(function(){
 		});
 		carousel.on( 'select.flickity', function() {
 			selected = $(flkty.selectedElement);
-			selected.removeClass("is-next is-prev")
+			console.log( $(selected).addBack() )
+			selected.siblings().addBack().removeClass("is-next is-prev");
 			selected.next().addClass("is-next");
 			selected.prev().addClass("is-prev");
 		  	//console.log( $(flkty.selectedElement).next() )
 		})
+
+
 	}
 
 
@@ -115,22 +118,20 @@ $(function(){
 	});
 	flickityPrevNext( $('.short-productions-carousel') );
 
-	var carouselNews = $('.short-news-carousel .carousel-items').flickity({
+	var carouselPartners = $('.short-partners-carousel .carousel-items').flickity({
 		imagesLoaded: true,
-		autoPlay: false,
+		autoPlay: 3000,
 		arrowShape: arrowStyle,
 		initialIndex: 2,
-		prevNextButtons: false,
+		prevNextButtons: true,
 		draggable: checkSm(),
-		selectedAttraction: 0.1,
-		friction: 1,
-		wrapAround: false,	
+		wrapAround: null,	
 		pageDots: false,
 		contain: false,
 		percentPosition: true,
 		cellAlign: 'center'
 	});
-	flickityPrevNext( $('.short-news-carousel') );
+	flickityPrevNext( $('.short-partners-carousel') );
 
 
 
