@@ -650,7 +650,7 @@ $header-min-menu: 100px;
 	//position: relative;
 	background-color: $color-1;
 	height: $header-min-menu;
-	display: none;
+	display: block;
 	@media ( min-width: 991px ){
 		display: none;
 	}
@@ -839,8 +839,8 @@ $header-min-menu: 100px;
 	box-shadow: 0 0 20px 0 black;
 	background-color: darken($color-1, 5%);
 	.min-menu-logo{
-		padding: 16px 0;
-		width: 120px;
+		padding: 10px 0;
+		width: 110px;
 	}
 	.min-menu-bar{
 		padding: 10px 0;
@@ -1348,6 +1348,7 @@ a[target="_blank"]{
 	@media (max-width: 991px) {
 		text-align: center;
 		.slide-header{
+			width: 100%;
 			left: 0!important;
 			top: 20% !important;
 		}
@@ -1455,16 +1456,16 @@ a[target="_blank"]{
 
 
 .search{
-	position: absolute;
-	width: 100%;
 	
+	@media ( min-width: 992px ){
+		width: 100%;
+		position: absolute;
+	}
 }
 .search-content{
 	padding: 25px 60px;
 	background-color: $color-1; 
-	width: 80%;
 	margin: auto;
-	transform: translateY(-50px);
 	.wrapper{
 		@extend .fuller;
 		background-image: url( "../img/other/texture-1.png" );
@@ -1478,7 +1479,7 @@ a[target="_blank"]{
 		position: relative;
 		input{
 			color: black;
-			padding: 5px 30px;
+			padding: 5px 25px;
 			height: 40px;
 			border: 0;
 			width: 100%;
@@ -1488,20 +1489,37 @@ a[target="_blank"]{
 				letter-spacing: 2px;
 			}
 		}
+	}
+	button{
+		background-color: #333;
+		color: white;
+	  padding: 5px 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+		border:0;
+		i{
+			font-size: 20px;
+		}
+	}
+
+	@media ( min-width: 992px ){
+		width: 80%;
+		transform: translateY(-50px);
+	}
+	@media ( max-width: 991px ) {
+		margin: 30px 0;
+		//font-size:;
 		button{
-			background-color: #333;
-			color: white;
-		  padding: 5px 30px;
-	    position: absolute;
-	    top: 0;
-	    right: 0;
-	    height: 100%;
-			border:0;
+			&, *:not(i){
+				font-size: 0;
+			}
+			padding: 5px 15px;
 			i{
-				font-size: 20px;
+				font-size: 15px;
 			}
 		}
-
 	}
 }
 
@@ -1511,6 +1529,7 @@ a[target="_blank"]{
 
 .short-services{
 	position: relative;
+	overflow: hidden;
 	.wrapper-bg{
 		@extend .fuller;
 		pointer-events: none;
@@ -1523,6 +1542,7 @@ a[target="_blank"]{
 
 	@include align-cells( 70, 3, table );
 	figure{
+		@extend .letter-none;
 		padding: 0 15px 20px;
 	}
 	.img-content{
@@ -1565,20 +1585,14 @@ a[target="_blank"]{
 .short-tour-items{
 	text-align: center;
 	$width: 650;
-	height: ($width+40)+px;
-	position:relative;
-	@extend .letter-none;
+	position:relative;	
 	figure{
-		@extend .letter-none;
-		pointer-events: none;
-		//width: 50%;
-		//height: 250px;
+		pointer-events: none;				
 		display: inline-block;
 		position: relative;
 		padding: 20px;
-		top: ($width/4)+px;
+		
 		.img-content{
-
 			background-position:center;
 			background-size: cover;
 			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -1595,28 +1609,35 @@ a[target="_blank"]{
 		a{
 
 		}
+		@media ( max-width:991px ) {
+			width: 100% !important;
+		}
+		@media ( min-width: 992px ) {
+				top: ($width/4)+px;
+				&:first-child, &:last-child{
+					width:100%;
+					position: absolute;
+					top: ($width/4)+px;
+					left: 0;
+				}
+				&:nth-child(2){
+					left:0;
+				}
+				&:nth-child(3){
+					right:0;
+				}
+
+				&:first-child{
+					 transform: translateY(50%);
+				}
+				&:last-child{
+					 transform: translateY(-50%);
+				}			
+		}
+		
 	}
-	figure{
-		&:first-child, &:last-child{
-			width:100%;
-			position: absolute;
-			top: ($width/4)+px;
-			left: 0;
-		}
-		&:nth-child(2){
-			left:0;
-		}
-		&:nth-child(3){
-			right:0;
-		}
-
-		&:first-child{
-			 transform: translateY(50%);
-		}
-		&:last-child{
-			 transform: translateY(-50%);
-		}
-
+	@media ( min-width: 992px ){
+		height: ($width+40)+px;
 	}
 }
 
@@ -1633,15 +1654,29 @@ a[target="_blank"]{
 
 
 //short-partners
+.short-partners{
+	margin: 45px 0;
+}
 .short-partners-carousel{
+	position: relative;
 	.carousel-items{
 		@include align-cells( 90, 5, table);
 		@include img-auto-adaptive();
 		@include img-flex-align( center, 100px );
+		figure{
+			transition: all 0.3s ease-in-out;
+			filter: grayscale(1);
+			&:hover{
+				filter: grayscale(0);
+			}
+		}
 		.img-content{
 			img{
 				width: 100%;
 			}
+		}
+		@media (max-width: 991px) {
+			@include align-cells( 90, 1, table);
 		}
 	}
 }

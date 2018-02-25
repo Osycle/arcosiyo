@@ -123,7 +123,7 @@ $(function(){
 		autoPlay: 3000,
 		arrowShape: arrowStyle,
 		initialIndex: 2,
-		prevNextButtons: true,
+		prevNextButtons: false,
 		draggable: checkSm(),
 		wrapAround: null,	
 		pageDots: false,
