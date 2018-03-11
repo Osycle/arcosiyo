@@ -316,13 +316,13 @@ $(function(){
 					hideArrowsOnMobile:"on",
 					hideThumbsUnderResoluition:0,
 
-					hideThumbs: -1,
+					hideThumbs: 300,
 					hideTimerBar:"on",
 
 					keyboardNavigation:"off",
 
 					navigationType:"none",
-					navigationArrows:"none",	//solo
+					navigationArrows:"solo",	//solo
 					navigationStyle:"round",
 
 					navigationHAlign:"center",
@@ -362,11 +362,11 @@ $(function(){
 
 		      shadow:0
 
-		    }).find("li").click(function(){ revSlider.revnext() })
+		    })
 			
 
 		});
-
+		$(".tparrows").append('<svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 65,95 L 20,50  L 65,5 L 60,0 Z" class="arrow"></path></svg>')
 
 	});
 }) (jQuery);
