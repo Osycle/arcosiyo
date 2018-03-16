@@ -139,13 +139,18 @@ html{
 		margin: auto 15px;
 		list-style: disc;
 		line-height: 170%;
-		list-style-position: outside;
 	}
 	&.inside{
 		li{
 			list-style-position: inside;
 		}
 	}
+	&.outside{
+		li{
+			list-style-position: outside;
+		}
+	}
+
 }
 
 .list-style-1{
@@ -153,13 +158,14 @@ html{
 		position: relative;
 		li{
 			list-style: none;
-			list-style-position: outside;
+			list-style-position: inside;
 			list-style-image: url('../img/icons/list-icon.png');
+			margin-top: 5px;
+			margin-bottom: 5px;
 		}
 	}
 
 }
-
 
 
 

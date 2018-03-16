@@ -376,7 +376,7 @@ html{
 
 
 @for $i from 0 through 9 {
-	.font-w-#{100*$i} { 
+	.font-w-#{1*$i} { 
 		font-weight: 100*$i;
 	}
 }
@@ -570,7 +570,9 @@ html{
 .bg-center{
 	background-position: center center;
 }
-
+.text-none{
+	text-transform: none;
+}
 
 .relative{
 	position: relative;
