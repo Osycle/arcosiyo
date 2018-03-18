@@ -142,11 +142,15 @@
 	@extend .btn-style;
 	color: white;
 	transition: all 0.3s ease-in-out;
+	*{
+		color: inherit;
+	}
 	&:not([class*="bg-color"]){
 		background-color: $color-1;
 	}
 	&:hover{
 		background-color: $color-2;
+		color: white;
 	}
 	&.radius{
 		border-radius: 20px;
@@ -1204,7 +1208,7 @@ a[target="_blank"]{
 
 
 
-
+//short-tour
 .short-tour{
 	position: relative;
 	background-color: $color-1;
@@ -1224,7 +1228,9 @@ a[target="_blank"]{
 .short-tour-items{
 	text-align: center;
 	$width: 650;
+	$figureWidth: 320;
 	position:relative;	
+	@extend .letter-none;
 	figure{
 		pointer-events: none;				
 		display: inline-block;
@@ -1235,52 +1241,87 @@ a[target="_blank"]{
 			background-position:center;
 			background-size: cover;
 			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-			width: ( ($width/2)-10)+px;
-			height: ( ($width/2)-10)+px;
+			//width: ( ($width/2)-10)+px;
+			//height: ( ($width/2)-10)+px;
+			width: $figureWidth+px;
+			height: $figureWidth+px;
 			margin: auto;
 		}
 		.btn-def, .cell-hover{
 			pointer-events: auto;
 		}
 		.cell-hover{
-			padding: 0 10%;
-		}
-		a{
-
+			padding: 0 15%;
 		}
 		@media ( max-width:991px ) {
-			width: 100% !important;
+			//width: 100% !important;
+			padding: 0;
+			margin: 30px 0;
+			.img-content{
+				width: 280px;
+				min-height: 280px;
+				clip-path: none;
+			}
 		}
 		@media ( min-width: 992px ) {
-				top: ($width/4)+px;
+				//top: ($width/4)+px;
 				&:first-child, &:last-child{
+
+				}
+				&:nth-child(4n+1){
 					width:100%;
-					position: absolute;
-					top: ($width/4)+px;
+					position: relative;
 					left: 0;
 				}
-				&:nth-child(2){
-					left:0;
+				&:nth-child(4n+2), &:nth-child(4n+3){
+					width:51%;
+					top: ($figureWidth/2+20)+px;
+					position: absolute;
 				}
-				&:nth-child(3){
-					right:0;
+				&:nth-child(4n+2){
+					left: 0;
 				}
+				&:nth-child(4n+3){
+					right: 0;
+				}
+				&:nth-child(5n+5), &:nth-child(5n+6){
+					width:50%;
+					top: ( ( $figureWidth/2+20 ) * 3 )+px;
+					position: absolute;
+				}
+				&:nth-child(5n+5){
+					left: 0;
+				}
+				&:nth-child(5n+6){
+					right: 0;
+					left: unset;
+				}
+				&:nth-last-child(2):nth-child(2){
+					 width: 100%;
+					 z-index: 1;
+				}
+				&:nth-last-child(1):nth-child(1){
+					 width: 100%;
+					 top: 25%;
+				}
+				&:nth-last-child(1):nth-child(5){
+					 width: 100%;
+					 z-index: 1;
+					 top: 25%;
+				}
+				&:nth-last-child(1):nth-child(3), &:nth-last-child(1):nth-child(2){
+					 position: relative;
+					 width: 100%;
+					 top: 0;
+				}		
 
-				&:first-child{
-					 transform: translateY(50%);
-				}
-				&:last-child{
-					 transform: translateY(-50%);
-				}			
 		}
-		
+		&:hover{
+			z-index: 2;
+		}
 	}
-	@media ( min-width: 992px ){
-		height: ($width+40)+px;
-	}
+
 }
-
-
 
 
 
@@ -1427,8 +1468,7 @@ a[target="_blank"]{
 
 
 
-
-
+//tour
 .tour{
 	position: relative;
 	background-color: $color-1;
@@ -1448,7 +1488,9 @@ a[target="_blank"]{
 .tour-items{
 	text-align: center;
 	$width: 650;
+	$figureWidth: 320;
 	position:relative;	
+	@extend .letter-none;
 	figure{
 		pointer-events: none;				
 		display: inline-block;
@@ -1456,55 +1498,147 @@ a[target="_blank"]{
 		padding: 20px;
 		
 		.img-content{
+			transition: all 0.3s ease-in-out;
 			background-position:center;
 			background-size: cover;
 			clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-			width: ( ($width/2)-10)+px;
-			height: ( ($width/2)-10)+px;
+			//width: ( ($width/2)-10)+px;
+			//height: ( ($width/2)-10)+px;
+			width: $figureWidth+px;
+			height: $figureWidth+px;
 			margin: auto;
 		}
 		.btn-def, .cell-hover{
 			pointer-events: auto;
 		}
 		.cell-hover{
-			padding: 0 10%;
-		}
-		a{
-
+			padding: 0 15%;
 		}
 		@media ( max-width:991px ) {
-			width: 100% !important;
+			//width: 100% !important;
+			padding: 0;
+			margin: 30px 0;
+			.img-content{
+				width: 280px;
+				min-height: 280px;
+				clip-path: none;
+			}
+			.cell-hover{
+				padding: 0 7%;
+			}
 		}
 		@media ( min-width: 992px ) {
-				top: ($width/4)+px;
+				//top: ($width/4)+px;
 				&:first-child, &:last-child{
+
+				}
+				&:nth-child(4n+1){
 					width:100%;
-					position: absolute;
-					top: ($width/4)+px;
+					position: relative;
 					left: 0;
 				}
-				&:nth-child(2){
-					left:0;
+				&:nth-child(4n+2), &:nth-child(4n+3){
+					width:51%;
+					top: ($figureWidth/2+20)+px;
+					position: absolute;
 				}
-				&:nth-child(3){
-					right:0;
+				&:nth-child(4n+2){
+					left: 0;
 				}
-
-				&:first-child{
-					 transform: translateY(50%);
+				&:nth-child(4n+3){
+					right: 0;
+				}
+				&:nth-child(5n+5), &:nth-child(5n+6){
+					width:50%;
+					top: ( ( $figureWidth/2+20 ) * 3 )+px;
+					position: absolute;
+				}
+				&:nth-child(5n+5){
+					left: 0;
+				}
+				&:nth-child(5n+6){
+					right: 0;
+					left: unset;
 				}
 				&:nth-last-child(2):nth-child(2){
 					 width: 100%;
+					 z-index: 1;
+				}
+				&:nth-last-child(1):nth-child(1){
+					 width: 100%;
+					 top: 0;
+				}
+				&:nth-last-child(1):nth-child(5){
+					 width: 100%;
+					 z-index: 1;
+					 top: ($figureWidth/2+20)+px;
+				}
+				&:nth-last-child(1):nth-child(3), &:nth-last-child(1):nth-child(2){
+					 position: relative;
+					 width: 100%;
+					 top: 0;
 				}		
 
-
 		}
-		
+		&:hover{
+			.img-content{
+				transform: scale(1.05) !important;
+			}
+			transition: all 0.1s ease-in-out;
+			z-index: 2;
+		}
 	}
-	@media ( min-width: 992px ){
-		height: ($width+40)+px;
-	}
+
 }
+.tour-carousel{
+	position: relative;
+	@media ( max-width: 991px ){
+		.carousel-prev-next{
+			display: none;
+		}
+	}
+	@media ( min-width:992px ){
+
+		.carousel-items{
+			position: relative;
+			.carousel-cell{
+				width: 100%;
+				opacity: 0;
+				transform: scale(0.3);
+				transition: all 1s ease;
+				figure{
+					transition: all 0.8s ease-in-out;
+					transform: rotate(-180deg);
+				}
+				&.is-selected{
+					opacity: 1;
+					transform: scale(1);
+					figure{
+						transform: scale(1);
+					}
+				}
+			}
+		}
+		.carousel-prev-next{
+			color: white;
+			.next, .prev{
+				height: 75px;
+				&:hover{
+					color: black;
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
 
 
 

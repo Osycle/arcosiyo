@@ -83,7 +83,7 @@ $(function(){
 		});
 		carousel.on( 'select.flickity', function() {
 			selected = $(flkty.selectedElement);
-			console.log( $(selected).addBack() )
+			//console.log( $(selected).addBack() )
 			selected.siblings().addBack().removeClass("is-next is-prev");
 			selected.next().addClass("is-next");
 			selected.prev().addClass("is-prev");
@@ -121,6 +121,7 @@ $(function(){
 	var carouselPartners = $('.short-partners-carousel .carousel-items').flickity({
 		imagesLoaded: true,
 		autoPlay: 3000,
+		pauseAutoPlayOnHover: true,
 		arrowShape: arrowStyle,
 		initialIndex: 2,
 		prevNextButtons: false,
@@ -133,8 +134,26 @@ $(function(){
 	});
 	flickityPrevNext( $('.short-partners-carousel') );
 
-
-
+	if( !checkSm() ){
+		window.carouselTour = $('.tour-carousel .carousel-items').flickity({
+			imagesLoaded: true,
+			autoPlay: false,
+			arrowShape: arrowStyle,
+			//cellSelector: '.carousel-cell',
+			pauseAutoPlayOnHover: true,
+			initialIndex: 1,
+			selectedAttraction: 1,
+			friction: 1,
+			prevNextButtons: false,
+			draggable: checkSm(),
+			wrapAround: null,	
+			pageDots: false,
+			contain: false,
+			percentPosition: true,
+			cellAlign: 'center'
+		});
+		flickityPrevNext( $('.tour-carousel') );
+	}
 
 
 
