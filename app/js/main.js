@@ -36,13 +36,15 @@ $(function(){
 
 	$("#min-menu").mmenu({
 		extensions 	: [ 
-									"position-bottom", 
 									"fullscreen", 
 									//"theme-black", 
-									"listview-50", 
+									//"listview-50", 
 									"fx-panels-slide-up", 
 									"fx-listitems-drop", 
-									"border-offset" 
+									"border-offset" ,
+			            "position-front",
+			            "position-bottom"
+         
 									],
 		navbar 			: 
 								{

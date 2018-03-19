@@ -3,6 +3,7 @@ $plugins_path: "plugins/";
 
 //THEME
 @import "_normalize";
+@import "_mixins";
 @import "_fonts";
 @import "_font-awesome";
 @import "_bootstrap";
@@ -23,5 +24,4 @@ $plugins_path: "plugins/";
 //OTHER
 //@import "_min-menu";
 //@import "_icomoon";
-@import "_mixins";
 @import "_style";

@@ -77,36 +77,87 @@
 				<!-- ./CONTAINER -->
 			</div>
 			<!-- ./HEADER TOP -->
-			<!-- MIN MENU -->
-			<div id="min-menu">
-				<ul>
-					<li><a href="index.html">Главная</a></li>
-					<li><a href="about.html">О нас</a></li>
-					<li><a href="services.html">Услуги</a></li>
-					<li><a href="tour.html">Туры по Узбекистану</a></li>
-					<li><a href="partners.html">Партнеры</a></li>
-					<li><a href="contacts.html">Контакты</a></li>
-				</ul>
+		</header>
+		<!-- MIN MENU -->
+		<div id="min-menu" data-aos="fade" data-aos-delay="0">
+			<ul>
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="about.html">О нас</a></li>
+				<li><a href="services.html">Услуги</a></li>
+				<li><a href="tour.html">Туры по Узбекистану</a></li>
+				<li><a href="partners.html">Партнеры</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+			</ul>
+		</div>
+		<!-- MIN MENU HEADER -->
+		<div class="min-menu-header hidden-md hidden-lg">
+			<div class="wrapper-bg"></div>
+			<div class="col-xs-6">
+				<div class="min-menu-logo">
+					<a href="index.html"><img src="img/logo.svg"/></a>
+				</div>
 			</div>
-			<!-- MIN MENU HEADER -->
-			<div class="min-menu-header hidden-md hidden-lg">
-				<div class="wrapper-bg"></div>
-				<div class="col-xs-6">
-					<div class="min-menu-logo">
-						<a href="index.html"><img src="img/logo.svg"/></a>
+			<div class="min-menu-bar col-xs-6">
+				<a href="#min-menu">
+					<div class="bar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!-- FORM MODAL -->
+		<div class="form-modal modal fade" id="form-modal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+
+					<div class="wrapper-bg"></div>
+
+					<button type="button" class="btn" data-dismiss="modal"><span class="icon-bar"></span><span class="icon-bar"></span></button>
+
+					<div class="modal-body">
+
+						 <!-- success-info -->
+						<div class="col-md-12 success-info m-b-45 text-center">
+							<div class="info-suc" id=""></div>
+							<div class="info-err" id=""></div>
+						</div>
+
+						<form  method="POST" action="">
+						
+							<h3>Связаться с нами</h3>
+
+							<!-- NAME -->
+							<div class="m-v-15">
+								<label for="input-1">Имя, фамилия</label>
+								<input type="text" id="input-1" class="form-control" name="name" placeholder="Ваше имя">
+							</div>
+							<!-- EMAIL -->
+							<div class="m-v-15">
+								<label for="input-2">Электронная почта</label>
+								<input type="text" id="input-2" class="form-control" name="email" placeholder="Ваш E-mail">
+							</div>
+							<!-- TEL -->
+							<div class="m-v-15">
+								<label for="input-3">Номер телефона</label>
+								<input type="text" id="input-3" class="form-control" name="tel" placeholder="Ваш телефон">									
+							</div>
+							<!-- MSG -->
+							<div class="textarea">
+								<label for="input-3">Сообщение</label>
+								<textarea name="msg" class="textarea form-control" resize="none" placeholder="Сообщение"></textarea>
+							</div>
+							<br>
+							<div class="form-footer">
+								<button type="submit" class="text-right btn-def btn-res color-white submit"><b>Отправить</b></button>
+							</div>
+
+						</form>
 					</div>
 				</div>
-				<div class="min-menu-bar col-xs-6">
-					<a href="#min-menu">
-						<div class="bar">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</div>
-					</a>
-				</div>
 			</div>
-		</header>
+		</div>
 		<main data-aos="fade" data-aos-delay="0">
 
 			<!-- REV SLIDER -->
@@ -157,22 +208,80 @@
 				<div class="texture wrapper-bg"></div>
 
 				<!-- services -->
-				<div class="services-article">
+				<div class="services-article table-content">
 					<div class="container">
 						<div class="text-center">
 							<h1>Наши услуги</h1>
 							<p>Мы готовы предоствить вам</p>
 						</div>
-						<div class="clearfix m-v-30 row m-t-60">
-							<div class="text-content parag-m-v-15">
+						<div class="clearfix m-v-30 m-t-60">
+							<div class="text-content parag-m-v-10">
 								<img src="img/services/article-1.jpg" alt="" align="left">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus soltudin, et vehicula nibh consectetur. Mauris cursus urna eu sem dignissim elementum id eu odio. Fusce pretium augue nunc, sodales luctus lacus convallis a. Nullam vulptate urna vulputate diam ullamcorper, sit amet varius dolor lobortis. Donec maxmus ante et libero pharetra vestibulum. Nulla accumsan, ante in ultrices mattis, risus sapien dignissim enim, in malesuada augue purus ac risus. Vestibulum sodales nec ligula eu consequat. Pellentesque feugiat aliquet neque, vitae cursus lorem semper in. Pellentesque cursus sem at neque tempus, sit amet pulvinar ante semper. Donec non ornare urna. Curabitur maximus, enim cursus cursus tempor, quam erat faucibus ex, sit amet lobortis diam justo at orci. In nec risus ullamcorper libero mattis dignissim nec eu dolor. Donec porttitor orci metus, at faucibus quam viverra quis. Sed imperdiet sem et lectus vehicula rutrum. Ut finibus sapien et nibh tempor, quis vehula mauris vulputate.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Et vehicula nibh consectetur. Mauris cursus urna eu sem dignissim elementum id eu odio. Fusce pretium augue nunc, sodales luctus lacus convallis a. Nullam vulptate urna vulputate diam ullamcorper, sit amet varius dolor lobortis. Donec maxmus ante et libero pharetra vestibulum. Nulla accumsan, ante in ultrices mattis, risus sapien dignissim enim, in malesuada augue purus ac risus. Vestibulum sodales nec ligula eu consequat. Pellentesque feugiat aliquet neque, vitae cursus lorem semper in. Pellentesque cursus sem at neque tempus, sit amet pulvinar ante semper. Donec non ornare urna. Curabitur maximus, enim cursus cursus tempor, quam erat faucibus ex, sit amet lobortis diam justo at orci. In nec risus ullamcorper libero mattis dignissim nec eu dolor. Donec porttitor orci metus, at faucibus quam viverra quis. Sed imperdiet sem et lectus vehicula rutrum. Ut finibus sapien et nibh tempor, quis vehula mauris vulputate.</p>
 								<p>Nulla a tempus odio, eu facilisis massa. Cras tempus est vel sagittis sodales. Quisque in erat pharetra, ullamcorper dui et, commodo purus. Aenean ac massa at massa condimentum tristique. Vestibulum et odio fermentum lectus scelerisque sollicitudin. Donec lacinia, erat ut scelerisque dapibus, lorem purus iaculis ante, non dignissim nunc libero </p>
 								<p>Nulla a tempus odio, eu facilisis massa. Cras tempus est vel sagittis sodales. Quisque in erat pharetra, ullamcorper dui et, commodo purus. Aenean ac massa at massa condimentum tristique. Vestibulum et odio fermentum lectus scelerisque sollicitudin. Donec lacinia, erat ut scelerisque dapibus, lorem purus iaculis ante, non dignissim nunc libero </p>
 							</div>
+							<span class="btn-def col-md-3 col-xs-10 col-xs-offset-1 col-md-offset-0 m-v-15" >
+								<a data-toggle="modal" data-target="#form-modal" role="button">Заказать тур</a>
+							</span>
 						</div>
-						<div class="services-other">
-							<h1>Вас может заинтересовать другие услуги</h1>
+						<div class="services-other over-hidden">
+							<h1 align="center">Вас может заинтересовать другие услуги</h1>
+							<div class="services-other-items boxes-4 figure-m-v-20 m-v-60">
+								<figure>
+									<a href="" title="">
+										<div class="img-content hover-content">
+											<img src="img/services/4.jpg" alt="">
+											<div class="cell-hover text-center">
+												<div class="desc-content">
+													<h3>Lorem Ipsum</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus soltudin, et vehicula nibh consectetur. Mauris cursus urna eu </p>
+												</div>
+											</div>
+										</div>	
+									</a>							
+								</figure>
+								<figure>
+									<a href="" title="">
+										<div class="img-content hover-content">
+											<img src="img/services/3.jpg" alt="">
+											<div class="cell-hover text-center">
+												<div class="desc-content">
+													<h3>Lorem Ipsum</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus soltudin, et vehicula nibh consectetur. Mauris cursus urna eu </p>
+												</div>
+											</div>
+										</div>	
+									</a>							
+								</figure>
+								<figure>
+									<a href="" title="">
+										<div class="img-content hover-content">
+											<img src="img/services/1.jpg" alt="">
+											<div class="cell-hover text-center">
+												<div class="desc-content">
+													<h3>Lorem Ipsum</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus soltudin, et vehicula nibh consectetur. Mauris cursus urna eu </p>
+												</div>
+											</div>
+										</div>	
+									</a>							
+								</figure>
+								<figure>
+									<a href="" title="">
+										<div class="img-content hover-content">
+											<img src="img/services/7.jpg" alt="">
+											<div class="cell-hover text-center">
+												<div class="desc-content">
+													<h3>Lorem Ipsum</h3>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis nisi vel purus soltudin, et vehicula nibh consectetur. Mauris cursus urna eu </p>
+												</div>
+											</div>
+										</div>	
+									</a>							
+								</figure>
+
+							</div>
 						</div>
 					</div>
 				</div><!-- ./short-services -->

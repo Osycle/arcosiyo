@@ -109,7 +109,12 @@
 }
 
 
-
+.info-suc{
+	color: green;
+}
+.info-err{
+	color: red;
+}
 .btn-res{
 	background: transparent;
 	border: 0;
@@ -729,14 +734,12 @@ $header-min-menu: 100px;
 			display: block;
 			margin-top: 10px;
 			margin-bottom: 5px;
-			color: #333;
 			textarea{
 				resize: none;
-				background-color: #f0f0f0;
 				padding: 0.5em;
-				border-top: 2px solid $color-1;
+				//border-top: 2px solid $color-1;
 				transition: all 0.3s ease-in-out;
-				height: 60px;
+				min-height: 100px;
 				&:focus{
 					//height: 60px;
 				}
@@ -760,11 +763,17 @@ $header-min-menu: 100px;
 	button{
 		background-color: $color-1;
 	}
-
+	.wrapper-bg{
+		@extend .fuller;
+		background-image: url( "../img/other/texture-1.png" );
+    background-size: 1000px;
+    background-position: left;
+		filter: brightness(0%) invert(70%) sepia() hue-rotate(0deg);
+    opacity: 0.5;    
+	}
 	.modal-content{
 		color: $color-1;
 		margin-top: 70px;
-		background-image: url( "../img/other/texture-1.png" ) ;
 		@media only screen and (max-width: 991px){
 			width: 100%;
 		}
@@ -817,10 +826,10 @@ h1{
 	font-weight: 600;
 	font-size: em(33, 16);
 	padding-bottom: 0;
-	text-align: center;
+	//text-align: center;
 }
 h2{
-	text-transform: uppercase;
+	
 	font-size: em(26, 16);
 	margin-top: 20px;
 	margin-bottom: 10px;
@@ -1404,10 +1413,6 @@ a[target="_blank"]{
 
 
 
-
-
-
-
 //contacts-page
 .contacts-main{
 	overflow: hidden;
@@ -1647,7 +1652,6 @@ a[target="_blank"]{
 
 
 
-
 //services-article
 .services-article{
 	.text-content{
@@ -1656,7 +1660,9 @@ a[target="_blank"]{
 		}
 	}
 }
+.services-other-items{
 
+}
 
 
 

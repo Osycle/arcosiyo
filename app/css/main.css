@@ -5817,7 +5817,7 @@ html {
     -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
     font-weight: 500;
-    font-size: em(16, 16); }
+    font-size: 1em; }
     .breadcrumb a:hover, .breadcrumb a a:hover, .breadcrumb .active a:hover {
       -webkit-transform: translateY(-5px);
       -ms-transform: translateY(-5px);
@@ -5893,16 +5893,16 @@ h1, h2, h3 {
   font-family: "Open sans"; }
 
 h4 {
-  font-size: em(14, 16); }
+  font-size: 0.875em; }
 
 h3 {
-  font-size: em(18, 16); }
+  font-size: 1.125em; }
 
 h2 {
-  font-size: em(24, 16); }
+  font-size: 1.5em; }
 
 h1 {
-  font-size: em(36, 16); }
+  font-size: 2.25em; }
 
 ul {
   position: relative;
@@ -13383,6 +13383,12 @@ http://flickity.metafizzy.co
   .hover-content:hover .cell-hover {
     opacity: 1; }
 
+.info-suc {
+  color: green; }
+
+.info-err {
+  color: red; }
+
 .btn-res {
   background: transparent;
   border: 0;
@@ -13855,17 +13861,14 @@ http://flickity.metafizzy.co
   .form-modal form .textarea {
     display: block;
     margin-top: 10px;
-    margin-bottom: 5px;
-    color: #333; }
+    margin-bottom: 5px; }
     .form-modal form .textarea textarea {
       resize: none;
-      background-color: #f0f0f0;
       padding: 0.5em;
-      border-top: 2px solid #f29100;
       -webkit-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
-      height: 60px; }
+      min-height: 100px; }
     .form-modal form .textarea * {
       width: 100%; }
       .form-modal form .textarea *:focus {
@@ -13882,10 +13885,18 @@ http://flickity.metafizzy.co
 .form-modal button {
   background-color: #f29100; }
 
+.form-modal .wrapper-bg {
+  background-image: url("../img/other/texture-1.png");
+  -webkit-background-size: 1000px 1000px;
+  background-size: 1000px;
+  background-position: left;
+  -webkit-filter: brightness(0%) invert(70%) sepia() hue-rotate(0deg);
+  filter: brightness(0%) invert(70%) sepia() hue-rotate(0deg);
+  opacity: 0.5; }
+
 .form-modal .modal-content {
   color: #f29100;
-  margin-top: 70px;
-  background-image: url("../img/other/texture-1.png"); }
+  margin-top: 70px; }
   @media only screen and (max-width: 991px) {
     .form-modal .modal-content {
       width: 100%; } }
@@ -13920,11 +13931,9 @@ h1 {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 2.0625em;
-  padding-bottom: 0;
-  text-align: center; }
+  padding-bottom: 0; }
 
 h2 {
-  text-transform: uppercase;
   font-size: 1.625em;
   margin-top: 20px;
   margin-bottom: 10px; }
@@ -14601,9 +14610,6 @@ a[target="_blank"] {
     color: rgba(255, 255, 255, 0.2); }
   .footer-feedback input::-webkit-input-placeholder, .footer-feedback textarea::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.2); }
-  .footer-feedback input::-ms-expand, .footer-feedback textarea::-ms-expand {
-    border: 0;
-    background-color: transparent; }
   .footer-feedback input:focus::-moz-placeholder, .footer-feedback textarea:focus::-moz-placeholder {
     color: rgba(255, 255, 255, 0.8);
     opacity: 1; }
@@ -14611,9 +14617,6 @@ a[target="_blank"] {
     color: rgba(255, 255, 255, 0.8); }
   .footer-feedback input:focus::-webkit-input-placeholder, .footer-feedback textarea:focus::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.8); }
-  .footer-feedback input:focus::-ms-expand, .footer-feedback textarea:focus::-ms-expand {
-    border: 0;
-    background-color: transparent; }
 
 .footer-feedback input {
   height: 40px; }
@@ -16789,7 +16792,7 @@ html .p-r-120 {
   vertical-align: middle;
   text-align: center; }
 
-.fuller, .cell-hover, .hover-content .cell-hover, .min-menu-header .wrapper-bg, .search-content .wrapper-bg, .texture.wrapper-bg, .short-services .wrapper-bg, .short-tour .wrapper-bg, .tour .wrapper-bg, .claf, [data-flicker]:before {
+.fuller, .cell-hover, .hover-content .cell-hover, .min-menu-header .wrapper-bg, .form-modal .wrapper-bg, .search-content .wrapper-bg, .texture.wrapper-bg, .short-services .wrapper-bg, .short-tour .wrapper-bg, .tour .wrapper-bg, .claf, [data-flicker]:before {
   height: 100%;
   width: 100%;
   position: absolute;
