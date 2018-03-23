@@ -1202,10 +1202,11 @@ a[target="_blank"]{
 		clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
 		width: 250px;
 		height: 250px;
+		background-size: cover;
+		background-position: center center;
 		img{
 			width: 100%;
 		}
-		background-position: center center;
 	}
 	.desc-content{
 		margin: 15px 0;
@@ -1394,7 +1395,22 @@ a[target="_blank"]{
 			padding: 0 20%;
 		}
 	}
-
+	@media ( max-width:991px ){
+		figure{
+			.desc-content{
+		    overflow: auto;
+		    padding: 0 0;
+    		height: 275px;
+			}
+		}
+	}
+	@media ( max-width:480px ){
+		figure{
+			.desc-content{
+				height: 180px;
+			}
+		}
+	}
 }
 
 
