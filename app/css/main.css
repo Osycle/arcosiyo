@@ -14609,6 +14609,7 @@ a[target="_blank"] {
   padding: 15px;
   width: 100%;
   margin: 15px 0;
+  color: white;
   background-color: rgba(255, 255, 255, 0.05);
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
